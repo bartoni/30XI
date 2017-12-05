@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Plansze">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="194.0" minHeight="1.0" prefHeight="8.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="532.0" minHeight="10.0" prefHeight="525.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <GridPane prefHeight="83.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="login" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#zmienPlanszaLogin" text="LOGIN" GridPane.columnIndex="0" GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="data" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#zmienPlanszaDane" text="DANE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="statystyki" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#zmienPlanszaStatystyki" text="STATYSTYKI" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                    <children>
+                        <Label fx:id="label_login" prefHeight="38.0" prefWidth="198.0">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="label_rola" prefHeight="41.0" prefWidth="189.0">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        <Pane fx:id="plansza" prefHeight="400.0" prefWidth="600.0" GridPane.rowIndex="1" />
+    </children>
+</GridPane>
